@@ -78,7 +78,7 @@ h6 {
     background-image: var(--main-image);
     background-position: center center;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     color: #fff;
 }
 
@@ -111,21 +111,23 @@ h6 {
     list-style: none;
     display: inline;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     padding: 2.5rem;
     transition: 250ms all ease-in-out;
 }
 
-#menu ul li:hover {
-    background-color: rgba(123, 123, 123, 0.2);
+#menu ul li:hover a{
+    color: #fff;
+    text-shadow: 0 0 4px #664ac9 ;
+    letter-spacing: .1em;
 }
 
 #menu h1 {
     font-size: 3.5rem;
-    text-shadow: 0px 0px 10px #664ac9 ;
 }
 
-#menu h1 a {
+#menu h1 a:hover {
+    text-shadow: 0px 0px 10px #664ac9 ;
     color: #fff;
     letter-spacing: .1em;
 }
@@ -138,7 +140,7 @@ h6 {
 
 .intro-img img {
     max-width: 40%;
-    height: auto;
+    min-height: auto;
     margin-bottom: 3rem;
     padding-left: 10rem;
 }
@@ -158,7 +160,7 @@ h6 {
     align-items: center;
     text-align: center;
     gap: 0 6rem;
-    height: 165vh;
+    min-height: 165vh;
 }
 
 #portfolio h2 {
@@ -176,6 +178,15 @@ h6 {
 
 }
 
+.content-three {
+    margin-top: -20rem;
+    grid-column: span 2;
+}
+
+#contact h2 {
+    margin-bottom: 5rem;
+}
+
 /* Medias */
 
 @media (max-width: 157px){
@@ -185,12 +196,12 @@ h6 {
     }
 
     .content {
-        height: 270vh;
+        min-height: 270vh;
         padding: 3rem 2rem;
     }
 
     .content.main-background {
-        height: 150vh;
+        min-height: 150vh;
         padding: 10rem 4rem 5rem 4rem;
     }
 
