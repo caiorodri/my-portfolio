@@ -81,6 +81,7 @@ h6 {
     box-sizing: border-box;
     background-image: var(--main-image);
     background-position: center center;
+    max-width: 100%;
     width: 100vw;
     min-height: 100vh;
     color: #fff;
@@ -88,6 +89,7 @@ h6 {
 
 .secound-background {
     text-align: center;
+    max-width: 100%;
     background-color: var(--secound-color);
     color: var(--color);
     padding: 3rem 8rem;
@@ -116,7 +118,12 @@ h6 {
 }
 
 #top3 p {
+    font-size: 1.6rem;
     margin: 6rem 0;
+}
+
+#top3 h2 {
+    font-size: 4rem;
 }
 
 /* MENU */
@@ -159,6 +166,10 @@ h6 {
     letter-spacing: .1em;
 }
 
+.close-menu {
+    display: none;
+}
+
 
 /* PORTIFÓLIO */
 
@@ -173,7 +184,7 @@ h6 {
 
 #portfolio h2 {
     margin-bottom: 2rem;
-    font-size: 4rem;
+    font-size: 3.5rem;
 }
 
 #portfolio h2 a {
@@ -194,6 +205,7 @@ h6 {
 /* CONTATO */
 
 #contact h2 {
+    font-size: 4.5rem;
     margin-top: 5rem;
     margin-bottom: 2rem;
 }
@@ -230,6 +242,7 @@ input:focus, textarea:focus {
 }
 
 #contact {
+    height: 110vh;
     justify-content: center;
     align-items: center;
 }
@@ -273,7 +286,7 @@ fieldset.field-group .form-group {
 
 .form-group input[type="email"]{
     text-align: center; 
-    width: 20vw;
+    width: 30vw;
 }
 
 .form-group textarea {
@@ -302,6 +315,65 @@ fieldset.field-group .form-group {
 
 }
 
+/* RODAPÉ */
+
+#footer {
+
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2rem 5rem;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 25vh;
+    background-color: rgb(69, 69, 69);
+}
+
+#footer h3 {
+    color: #fff;
+    font-family: 'Kanit', sans-serif;
+    font-size: 2rem;
+}
+
+#footer p {
+    color: #0A1128;
+    font-size: 1.6rem;
+}
+
+#footer li {
+
+    margin-top: 0.4rem;
+    font-size: 1.6rem;
+}
+
+#footer li a:hover , #footer p:hover{
+    
+    color: #fff; 
+    letter-spacing: 0.2rem;
+    text-shadow: 0 0 4px #664ac9;
+}
+
+#footer p:hover {
+    font-size: 2rem;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    background-color: #fff;
+    display: flex;
+    width: 6rem;
+    height: 6rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 4rem;
+    rotate: -90deg;
+    border: 1px solid #6922ff;
+}
 
 /* MEDIAS */
 
@@ -351,6 +423,75 @@ fieldset.field-group .form-group {
         margin-left: -10rem;
         padding-left: 0;
         justify-items: center;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .intro-img img {
+        max-width: 25%;
+    }
+
+    #box {
+        width: 60vw;
+    }
+   
+    #contact h2 {
+        font-size: 2rem;
+    }
+
+    .form-group input[type="text"] {
+        width: 30vw;
+    }
+
+    #contact #box .field-group{
+
+        margin-left: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    #contact label {
+        text-align: center;
+    }
+    
+    #portfolio {
+        grid-template-columns: 1fr;
+        height: 180vh;
+    }
+
+    #portfolio h2 {
+        font-size: 3rem;
+    }
+
+    #portfolio p {
+        font-size: 1.8rem;
+    }
+
+    .content-three {
+        margin-top: 0;
+        grid-column: span 1;
+    }
+
+    #footer {
+        height: 80vh;
+        grid-template-columns: 1fr;
+    }
+
+    #footer div {
+        margin: 5rem;
+    
+    }
+
+    #footer h3 {
+        color: #fff;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    #footer li {
+        font-size: 2.5rem;
+    }
+
+    #footer p {
+        font-size: 2rem;
     }
 }
 
@@ -361,7 +502,7 @@ fieldset.field-group .form-group {
     }
 
     .content {
-        height: 255vh;
+        height: 150vh;
         padding: 3rem 2rem;
     }
 
@@ -376,6 +517,14 @@ fieldset.field-group .form-group {
 
     .content h2, h1 {
         font-size: 2.2rem;
+    }
+
+    #top3 p {
+        font-size: 1.2rem;
+        margin: 3rem 0;
+    }
+    #top3 h2 {
+        font-size: 2rem;
     }
     
     #menu h1 {
@@ -397,9 +546,78 @@ fieldset.field-group .form-group {
     }
 
     .intro-img{
+        grid-template-columns: 1fr 1fr;
         margin-left: -10rem;
         padding-left: 0;
         justify-items: center;
+    }
+    
+    .intro-img img {
+        max-width: 25%;
+    }
+
+    #box {
+        width: 60vw;
+    }   
+
+    #contact h2 {
+        font-size: 2rem;
+    }
+   
+    .form-group input[type="text"] {
+        width: 30vw;
+    }
+
+    #contact #box .field-group{
+
+        margin-left: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    #contact label {
+        text-align: center;
+    }
+    
+    #portfolio {
+        grid-template-columns: 1fr;
+        height: 180vh;
+    }
+
+    #portfolio h2 {
+        font-size: 3rem;
+    }
+
+    #portfolio p {
+        font-size: 1.8rem;
+    }
+
+    .content-three {
+        margin-top: 0;
+        grid-column: span 1;
+    }
+
+    #footer {
+        height: 80vh;
+        grid-template-columns: 1fr;
+    }
+
+    #footer div {
+        margin: 5rem;
+    
+    }
+
+    #footer h3 {
+        color: #fff;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    #footer li {
+        font-size: 2.5rem;
+    }
+
+    #footer p {
+        font-size: 2rem;
     }
 }
 
@@ -410,7 +628,7 @@ fieldset.field-group .form-group {
     }
 
     .content {
-        height: 255vh;
+        height: 145vh;
         padding: 3rem 4rem;
     }
 
@@ -425,6 +643,14 @@ fieldset.field-group .form-group {
 
     .content h2, h1 {
         font-size: 3rem;
+    }
+
+    #top3 p {
+        font-size: 1.2rem;
+        margin: 3rem 0;
+    }
+    #top3 h2 {
+        font-size: 2rem;
     }
 
     #menu h1 {
@@ -449,12 +675,91 @@ fieldset.field-group .form-group {
         margin-left: -10rem;
         padding-left: 0;
         justify-items: center;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .intro-img img {
+        max-width: 25%;
+    }
+
+    #top3 {
+        padding: 2rem 4rem;
+        height: 150vh;
+    }
+
+    #box {
+        width: 60vw;
+    }   
+    
+    #contact h2 {
+        font-size: 3rem;
+    }
+   
+    .form-group input[type="text"] {
+        width: 30vw;
+    }
+
+    #contact #box .field-group{
+
+        margin-left: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    #contact label {
+        text-align: center;
+    }
+    
+    #portfolio {
+        grid-template-columns: 1fr;
+        height: 200vh;
+        padding: 2rem 2rem;
+    }
+
+    #portfolio h2 {
+        font-size: 2.2rem;
+    }
+
+    #portfolio p {
+        font-size: 1.4rem;
+    }
+
+    #portfolio div:hover p {
+        padding: 0;
+    }
+
+    .content-three {
+        margin-top: 0;
+        grid-column: span 1;
+    }
+
+    #footer {
+        height: 80vh;
+        grid-template-columns: 1fr;
+    }
+
+    #footer div {
+        margin: 5rem;
+    
+    }
+
+    #footer h3 {
+        color: #fff;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    #footer li {
+        font-size: 2rem;
+    }
+
+    #footer p {
+        font-size: 2rem;
     }
 }
 
 @media (min-width: 310px) and (max-width: 387px) {
     .content {
-        height: 230vh;
+        height: 150vh;
         padding: 3rem 5rem;
     }
 
@@ -473,6 +778,14 @@ fieldset.field-group .form-group {
 
     .content h2, h1 {
         font-size: 4rem;
+    }
+
+    #top3 p {
+        font-size: 1.4rem;
+        margin: 3rem 0;
+    }
+    #top3 h2 {
+        font-size: 2.5rem;
     }
 
     #menu h1 {
@@ -498,16 +811,94 @@ fieldset.field-group .form-group {
         padding-left: 0;
         justify-items: center;
     }
+    
+    .intro-img img {
+        max-width: 25%;
+    }
+
+    #top3 {
+        padding: 2rem 6rem;
+        height: 160vh;
+    }
+
+    #box {
+        width: 60vw;
+    }   
+    
+    #contact h2 {
+        font-size: 3.5rem;
+    }
+   
+    .form-group input[type="text"] {
+        width: 30vw;
+    }
+
+    #contact #box .field-group{
+
+        margin-left: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    #contact label {
+        text-align: center;
+    }
+    
+    #portfolio {
+        grid-template-columns: 1fr;
+        height: 190vh;
+        padding: 2rem 2rem;
+    }
+
+    #portfolio h2 {
+        font-size: 2.3rem;
+    }
+
+    #portfolio p {
+        font-size: 1.5rem;
+    }
+
+    #portfolio div:hover p {
+        padding: 0;
+    }
+
+    .content-three {
+        margin-top: 0;
+        grid-column: span 1;
+    }
+
+    #footer {
+        height: 100vh;
+        grid-template-columns: 1fr;
+    }
+
+    #footer div {
+        margin: 5rem;
+    
+    }
+
+    #footer h3 {
+        color: #fff;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    #footer li {
+        font-size: 2.5rem;
+    }
+
+    #footer p {
+        font-size: 2rem;
+    }
 }
 
 @media (min-width: 388px) and (max-width: 421px) {
     .content {
-        height: 230vh;
+        height: 175vh;
         padding: 3rem 7rem;
     }
 
     .content.main-background {
-        height: 150vh;
+        height: 130vh;
         padding: 10rem 6rem 5rem 6rem;
     }
     
@@ -517,6 +908,10 @@ fieldset.field-group .form-group {
 
     .content h2, h1{
         font-size: 4rem;
+    }
+
+    #top3 h2 {
+        font-size: 3rem;
     }
 
     #menu ul li{
@@ -537,17 +932,86 @@ fieldset.field-group .form-group {
         padding-left: 0;
         justify-items: center;
     }
+    
+    .intro-img img {
+        max-width: 25%;
+    }
+
+    #box {
+        width: 60vw;
+    } 
+    
+    #contact h2 {
+        font-size: 3.5rem;
+    }
+   
+    .form-group input[type="text"] {
+        width: 30vw;
+    }
+
+    #contact #box .field-group{
+
+        margin-left: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    #contact label {
+        text-align: center;
+    }
+    
+    #portfolio {
+        grid-template-columns: 1fr;
+        height: 190vh;
+        padding: 2rem 4rem;
+    }
+
+    #portfolio h2 {
+        font-size: 2.3rem;
+    }
+
+    #portfolio p {
+        font-size: 1.5rem;
+    }
+
+    .content-three {
+        margin-top: 0;
+        grid-column: span 1;
+    }
+
+    #footer {
+        height: 80vh;
+        grid-template-columns: 1fr;
+    }
+
+    #footer div {
+        margin: 5rem;
+    
+    }
+
+    #footer h3 {
+        color: #fff;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    #footer li {
+        font-size: 2.5rem;
+    }
+
+    #footer p {
+        font-size: 2rem;
+    }
 }
 
 @media (min-width: 422px) and (max-width: 507px) {
     .content.secound-background {
-        height: 200vh;
+        height: 160vh;
         padding: 3rem 7rem;
     }
 
     .content.main-background {
-        height: 165vh;
-        padding: 4rem 6rem;
+        height: 130vh;
+        padding: 10rem 6rem 4rem 6rem;
     }
 
     .content p {
@@ -581,11 +1045,85 @@ fieldset.field-group .form-group {
         padding-left: 0;
         justify-items: center;
     }
+    
+    .intro-img img {
+        max-width: 25%;
+    }
+
+    #top3 {
+        height: 155vh;
+    }
+
+    #box {
+        width: 60vw;
+    }
+   
+    .form-group input[type="text"] {
+        width: 30vw;
+    }
+
+    #contact #box .field-group{
+
+        margin-left: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    #contact label {
+        text-align: center;
+    }
+
+    .form-group input[type="text"] {
+        width: 30vw;
+    }
+    
+    #portfolio {
+        grid-template-columns: 1fr;
+        height: 190vh;
+        padding: 2rem 4rem;
+    }
+
+    #portfolio h2 {
+        font-size: 2.5rem;
+    }
+
+    #portfolio p {
+        font-size: 1.6rem;
+    }
+
+    .content-three {
+        margin-top: 0;
+        grid-column: span 1;
+    }
+
+    #footer {
+        height: 80vh;
+        grid-template-columns: 1fr;
+    }
+
+    #footer div {
+        margin: 5rem;
+    
+    }
+
+    #footer h3 {
+        color: #fff;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    #footer li {
+        font-size: 2.5rem;
+    }
+
+    #footer p {
+        font-size: 2rem;
+    }
+
 }
 
 @media (min-width: 508px) and (max-width: 578px) {
     .content.secound-background{
-        height: 230vh;
+        height: 150vh;
     }
 
     .content.main-background {
@@ -611,11 +1149,85 @@ fieldset.field-group .form-group {
         padding-left: 0;
         justify-items: center;
     }
+    
+    .intro-img img {
+        max-width: 25%;
+    }
+
+    #top3 {
+        height: 140vh;
+    }
+
+    #contact {
+        padding: 0;
+    }
+
+    #box {
+        width: 60vw;
+    }
+   
+    .form-group input[type="text"] {
+        width: 30vw;
+    }
+
+    #contact #box .field-group{
+
+        margin-left: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    #contact label {
+        text-align: center;
+    }
+    
+    #portfolio {
+        grid-template-columns: 1fr;
+        height: 180vh;
+        padding: 2rem 6rem;
+    }
+
+    #portfolio h2 {
+        font-size: 3rem;
+    }
+
+    #portfolio p {
+        font-size: 1.8rem;
+    }
+
+    .content-three {
+        margin-top: 0;
+        grid-column: span 1;
+    }
+
+    #footer {
+        height: 80vh;
+        grid-template-columns: 1fr;
+    }
+
+    #footer div {
+        margin: 5rem;
+    
+    }
+
+    #footer h3 {
+        color: #fff;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    #footer li {
+        font-size: 2.5rem;
+    }
+
+    #footer p {
+        font-size: 2rem;
+    }
+
 }
 
 @media (min-width: 579px) and (max-width: 620px) {
     .content {
-        height: 210vh;
+        height: 150vh;
     }
 
     #menu ul li{
@@ -638,11 +1250,54 @@ fieldset.field-group .form-group {
         padding-left: 0;
         justify-items: center;
     }
+    
+    .intro-img img {
+        max-width: 25%;
+    }
+
+    #top3 {
+        height: 120vh;
+    }
+    
+    #portfolio {
+        height: 200vh;
+    }
+
+    #contact #box .field-group{
+
+        margin-left: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    #contact label {
+        text-align: center;
+    }
+    
+    .form-group input[type="text"] {
+        width: 30vw;
+    }
+    
+    #portfolio {
+        grid-template-columns: 1fr;
+    }
+
+    #portfolio h2 {
+        font-size: 3rem;
+    }
+
+    #portfolio p {
+        font-size: 1.8rem;
+    }
+
+    .content-three {
+        margin-top: 0;
+        grid-column: span 1;
+    }
 }
 
 @media (min-width: 621px) and (max-width: 702px) {
     .content {
-        height: 190vh;
+        height: 130vh;
     }
     
     .main-background {
@@ -656,12 +1311,50 @@ fieldset.field-group .form-group {
         padding-left: 0;
         justify-items: center;
     }
+    
+    .intro-img img {
+        max-width: 25%;
+    }
 
+    #top3 {
+        height: 110vh;
+    }
+  
+    #contact #box .field-group{
+        margin-left: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    #contact label {
+        text-align: center;
+    }
+    
+    .form-group input[type="text"] {
+        width: 30vw;
+    }
+    
+    #portfolio {
+        height: 180vh;
+        grid-template-columns: 1fr;
+    }
+
+    #portfolio h2 {
+        font-size: 3rem;
+    }
+
+    #portfolio p {
+        font-size: 1.8rem;
+    }
+
+    .content-three {
+        margin-top: 0;
+        grid-column: span 1;
+    }
 }
 
 @media (min-width: 703px) and (max-width: 804px) {
     .content {
-        height: 170vh;
+        height: 130vh;
     }
     
     .main-background {
@@ -673,6 +1366,33 @@ fieldset.field-group .form-group {
     .intro-img{
         margin-left: -10rem;
         justify-items: center;
+    }
+
+    .intro-img img {
+        max-width: 25%;
+    }
+
+    #top3 {
+        height: 110vh;
+    }
+
+    #contact #box .field-group{
+        margin-left: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    #contact label {
+        text-align: center;
+    }
+    
+    #portfolio {
+        height: 180vh;
+        grid-template-columns: 1fr;
+    }
+
+    .content-three {
+        margin-top: 0;
+        grid-column: span 1;
     }
 }
 
@@ -681,9 +1401,17 @@ fieldset.field-group .form-group {
         height: 150vh;
     }
 
+    #main-background {
+        height: 120vh;
+    }
+
     .main-background { 
         padding-top: 8rem;
         grid-template-columns: 1fr;
+    }
+
+    #top3 p{
+        font-size: 2.2rem;
     }
 
     .intro-img{
@@ -693,13 +1421,37 @@ fieldset.field-group .form-group {
     }
 
     .intro-img img {
-        max-width: 30%;
+        max-width: 25%;
     }
+
+    #contact #box .field-group{
+
+        grid-template-columns: 1fr;
+    }
+
+    .field-group .form-group label{
+        text-align: center;
+    }
+    
+    #portfolio {
+        height: 180vh;
+        grid-template-columns: 1fr;
+    }
+
+    .content-three {
+        margin-top: 0;
+        grid-column: span 1;
+    }
+
 }
 
 @media (min-width: 920px) and (max-width: 1103px) {
     .content {
         height: 150vh;
+    }
+
+    #top3 p{
+        font-size: 2.2rem;
     }
     
     .main-background { 
@@ -708,7 +1460,7 @@ fieldset.field-group .form-group {
     }
 
     .main-background p {
-        font-size: 3rem;
+        font-size: 2.3rem;
     }
 
     .intro-img{
@@ -716,8 +1468,18 @@ fieldset.field-group .form-group {
     }
 
     .intro-img img {
-        max-width: 30%;
+        max-width: 25%;
     }
+
+    #portfolio {
+        grid-template-columns: 1fr;
+    }
+
+    .content-three {
+        margin-top: 0;
+        grid-column: span 1;
+    }
+
 }
 
 @media (min-width: 1103px) and (max-width: 1999px) {
@@ -739,6 +1501,13 @@ fieldset.field-group .form-group {
 
     .main-background {
         grid-template-columns: 1.2fr 1fr;
+        max-width: 100vw;
+        padding: 2rem 10rem 2rem 8rem;
+    }
+    
+    .secound-background {
+        max-width: 100vw;
+        padding: 2rem 10rem 2rem 8rem;
     }
 
 }
@@ -764,4 +1533,66 @@ fieldset.field-group .form-group {
     p {
         font-size: 4.5rem;
     }
+
+    .main-background {
+        max-width: 100vw;
+        padding: 2rem 10rem 2rem 8rem;
+    }
+
+    .secound-background {
+        max-width: 100vw;
+        padding: 2rem 10rem 2rem 8rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    #menu {
+        padding: 0;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        display: none;
+        align-items: center;
+    }
+
+    #menu ul {
+        display: grid;
+    }
+
+    .close-menu-label::after {
+        content: '☰';
+        position: fixed;
+        z-index: 4;
+        top: 1rem;
+        right: 2rem;
+        font-size: 3rem;
+        background-color: #6922ff;
+        color: #fff;
+        line-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 0.2rem;
+        cursor: pointer;
+    }
+
+    .close-menu:checked~#menu {
+        display: flex;
+    }
+
+    .close-menu:checked~.close-menu-label::after {
+        font-size: 4rem;
+        padding: 0.1rem 0.2rem 0.2rem 0.2rem;
+        content: '×';
+    }
+
+    .jump-space {
+        margin: 0;
+    }
+
 }
