@@ -59,35 +59,39 @@
     </div>
     <div class="content secound-background" id="contact">
         <h2>Contate-me</h2>
-        <form id="form">
-            <div class="form-group">
-                <form>
-                    <label for="name">Nome</label>
-                    <input type="text">
-                </form>
-            </div>
-            <div class="form-group">
-                <form>
-                    <label for="sobrenome">Sobrenome</label>
-                    <input type="text">
-                </form>
-            </div>
-            <div class="form-group" id="email-form">
-                <form>
-                    <label for="email">E-mail</label>
-                    <input type="text">
-                </form>
-            </div>
-            <div class="form-group" id="message-form">
-                <form>
-                    <label for="message">Mensagem</label>
-                    <textarea></textarea>
-                </form>
-            </div>
-            <div class="button">
-                <button type="submit">Enviar</button>
-            </div>
-        </form>
+        <div id="box">
+            <form id="form">
+                <fieldset class="field-group">
+                    <div class="form-group">
+                        <form>
+                            <label for="name">Nome</label>
+                            <input type="text" name="name" id="name" required>
+                        </form>
+                    </div>
+                    <div class="form-group">
+                        <form>
+                            <label for="sobrenome">Sobrenome</label>
+                            <input type="text" name="sobrenome" id="sobrenome">
+                        </form>
+                    </div>
+                </fieldset>
+                <div class="form-group" id="email-form">
+                    <form>
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" required>
+                    </form>
+                </div>
+                <div class="form-group" id="message-form">
+                    <form>
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </form>
+                </div>
+                <div class="button">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>
