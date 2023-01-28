@@ -10,16 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital@1&family=Paytone+One&display=swap" rel="stylesheet">
 </head>
 <body>
+    <input type="checkbox" id="close-menu" aria-label="Close Menu" class="close-menu" role="button">
+    <label for="close-menu" title="close-menu" class="close-menu-label"></label>
     <nav id="menu">
-        <h1><a href="#main-background">Caio</a></h1>
-        <ul>
+        <h1><a href="#home">Caio</a></h1>
+        <ul onclick="getElementById('close-menu').checked = false;">
             <li><a href="#top3">TOP 3</a></li>
             <li><a href="#portfolio">PORTIFÓLIO</a></li>
             <li><a href="#contact">FALE CONOSCO</a></li>
         </ul>
     </nav>
     <div class="jump-space"></div>
-    <section class="main-background content" id="main-background">
+    <section class="main-background content" id="home">
         <div class="intro-text">
             <h1 style="margin-bottom: 3rem; margin-top: -10rem;">Bem Vindo</h1>
             <p style="margin-bottom: 2rem;">Olá, sou Caio dos Santos Rodrigues e esse é meu portifólio. Sinta-se livre para explorar e conhecer um pouco sobre mim.</p>
@@ -87,11 +89,31 @@
                         <textarea id="message" name="message" required></textarea>
                     </form>
                 </div>
-                <div class="button">
-                    <button type="submit">Enviar</button>
+                <div class="button" >
+                    <button type="submit" >Enviar</button>
                 </div>
             </form>
         </div>
     </div>
+    <footer id="footer">
+        <div class="grid-footer">
+            <h3>Social Medias</h3>
+            <ul>
+                <li><a href="https://github.com/caiorodri" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/caio-rodrigues-7a7563252/" target="_blank">Linkedin</a></li>
+            </ul>
+        </div>
+        <div class="grid-footer">
+            <p>copyright © Caio 2023</p>
+        </div>
+        <div class="grid-footer">
+            <h3>Social Medias</h3>
+            <ul>
+                <li><a href="https://github.com/caiorodri" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/caio-rodrigues-7a7563252/" target="_blank">Linkedin</a></li>
+            </ul>
+        </div>
+    </footer>
+    <a href="#home" class="back-to-top">➜</a>
 </body>
 </html>
