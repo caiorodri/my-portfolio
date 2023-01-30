@@ -13,7 +13,7 @@
     <input type="checkbox" id="close-menu" aria-label="Close Menu" class="close-menu" role="button">
     <label for="close-menu" title="close-menu" class="close-menu-label"></label>
     <nav id="menu">
-        <h1><a href="#home">Caio</a></h1>
+        <h1 onclick="getElementById('close-menu').checked = false;"><a href="#home">Caio</a></h1>
         <ul onclick="getElementById('close-menu').checked = false;">
             <li><a href="#top3">TOP 3</a></li>
             <li><a href="#portfolio">PORTIFÓLIO</a></li>
@@ -41,7 +41,7 @@
     </section>
     <div class="content secound-background" id="top3">
         <h2>Principais Tecnologias</h2>
-        <p>PYTHON - Comecei a estudar python no começo de 2022, desde então venho praticando todos os dias. Fiz alguns projetos pessoais com ele, como Jogo da Forca, Conversor de Moeda, uma Calculadora de Emissão de Carbono para uma APS (Atividade Pratica Supervisionada) da faculdade e o que eu mais gostei de desenvolver que foi um jogo RPG de texto. Também foi a linguagem escolhida para aprendizado na faculdade em que estou cursando, então consegui rever os conceitos.</p>
+        <p>PYTHON - Comecei a estudar python no começo de 2022, desde então venho praticando todos os dias. Fiz alguns projetos pessoais com ele, como Jogo da Forca, Conversor de Moeda, uma Calculadora de Emissão de Carbono para uma APS (Atividade Pratica Supervisionada) da faculdade e o que eu mais gostei de desenvolver que foi um jogo RPG de texto. Também foi a linguagem escolhida para aprendizado na faculdade em que estou cursando.</p>
         <p>HTML e CSS - Comecei a estudar html e css em 2021, fiz alguns cursos e pratiquei bastante. Sou melhor na pratica do que na teoria, comecei a estudar antes que o Python, mas não tenho tanto dominio quanto. Fiz esse portifólio praticamente todo em HTML e CSS. Aproveitei essa ideia para dar uma revisada na linguagem</p>
         <p>JAVA - Comecei a estudar java no fim de 2022, mas já vinha estudando o conceito de orientação a objeto antes. Como aprendi muito de Python, estou tendo menos dificuldade em aprender java. Estou tendo aula de java na faculdade atualmente e estou começando alguns projetos pessoais também</p>
     </div>
@@ -60,38 +60,42 @@
         </div>
     </div>
     <div class="content secound-background" id="contact">
-        <h2>Contate-me</h2>
+        <h2>CONTATE-ME</h2>
         <div id="box">
-            <form id="form">
+            <form id="form" action="https://api.staticforms.xyz/submit" method="post">
                 <fieldset class="field-group">
                     <div class="form-group">
-                        <form>
+                        <div>
                             <label for="name">Nome</label>
-                            <input type="text" name="name" id="name" required>
-                        </form>
+                            <input type="text" name="name" id="name" autocomplete="off" required>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <form>
+                        <div>
                             <label for="sobrenome">Sobrenome</label>
-                            <input type="text" name="sobrenome" id="sobrenome">
-                        </form>
+                            <input type="text" name="sobrenome" id="sobrenome" autocomplete="off" required>
+                        </div>
                     </div>
                 </fieldset>
                 <div class="form-group" id="email-form">
-                    <form>
+                    <div>
                         <label for="email">E-mail</label>
-                        <input type="email" name="email" id="email" required>
-                    </form>
+                        <input type="email" name="email" id="email" autocomplete="off" required>
+                    </div>
                 </div>
                 <div class="form-group" id="message-form">
-                    <form>
+                    <div>
                         <label for="message">Mensagem</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </form>
+                        <textarea id="message" name="message" minlength="10" required></textarea>
+                    </div>
                 </div>
                 <div class="button" >
-                    <button type="submit" >Enviar</button>
+                    <button type="submit" name="button">Enviar</button>
                 </div>
+
+                <input type="hidden" name="accessKey" value="a0c2029f-8f75-4192-8738-cc97ba30d85b">
+                <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/">
+
             </form>
         </div>
     </div>
@@ -104,7 +108,7 @@
             </ul>
         </div>
         <div class="grid-footer">
-            <p>copyright © Caio 2023</p>
+            <p>copyright © 2023 - Caio</p>
         </div>
         <div class="grid-footer">
             <h3>Social Medias</h3>
