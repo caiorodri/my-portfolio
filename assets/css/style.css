@@ -398,6 +398,46 @@ textarea:focus, input:focus {
     border: 1px solid var(--color);
 }
 
+/* AGRADECIMENTOS */
+
+#thanks-background {
+    display: flex;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    background-image: var(--main-image);
+    background-position: center center;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-thanks {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-shadow: 0 0 15px #664ac9;
+    background-color: #0A1128;
+    padding: 5rem;
+    text-align: center;
+    color: #fff;
+    width: 50vw;
+    height: 60vh;
+}
+
+#thanks-background p a {
+    color: #0A1128;
+    background-color: #fff;
+    padding: .6rem;
+}
+
+#thanks-background p a:hover {
+    color: #fff;
+    background-color: #0A1128;
+}
+
+.content-thanks:hover {
+    box-shadow: 0 0 5px 2px #fff;
+}
+
 /* MEDIAS */
 
 @media (max-width: 157px){
