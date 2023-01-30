@@ -838,6 +838,14 @@ textarea:focus, input:focus {
     #footer p {
         font-size: 2rem;
     }
+
+    #thanks-background .content-thanks h1 {
+        font-size: 3rem;
+    }
+
+    #thanks-background .content-thanks p {
+        font-size: 1.6rem;
+    }
 }
 
 @media (min-width: 310px) and (max-width: 387px) {
@@ -978,6 +986,16 @@ textarea:focus, input:focus {
     #footer p {
         font-size: 2rem;
     }
+
+    #thanks-background .content-thanks h1 {
+        font-size: 3rem;
+    }
+
+    #thanks-background .content-thanks p {
+        font-size: 2rem;
+    }
+
+
 }
 
 @media (min-width: 388px) and (max-width: 421px) {
@@ -1098,6 +1116,11 @@ textarea:focus, input:focus {
     #footer p {
         font-size: 2rem;
     }
+    
+    #thanks-background .content-thanks h1 {
+        font-size: 4rem;
+    }
+
 }
 
 @media (min-width: 422px) and (max-width: 507px) {
@@ -1222,6 +1245,10 @@ textarea:focus, input:focus {
 
     #footer p {
         font-size: 2rem;
+    }
+
+    #thanks-background .content-thanks h1 {
+        font-size: 4rem;
     }
 
 }
