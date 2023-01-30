@@ -1,9 +1,9 @@
 :root {
-    --main-image: url("../img/sun-tornado-blue.png");
-    --image-alternative: url("../img/background-2.jpg");
+    --image-alternative: url("../img/sun-tornado-blue.png");
+    --main-image: url("../img/background-2.jpg");
     --secound-color: #fff;
-    --color: #0A1128;
-    --color-alternative: #26007E;
+    --color-alternative: #0A1128;
+    --color: #26007E;
 }
 
 * {
@@ -33,7 +33,7 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Paytone One', sans-serif;
+    font-family: 'Kanit', sans-serif;
 }
 
 p {
@@ -120,6 +120,7 @@ h6 {
 #top3 p {
     font-size: 1.6rem;
     margin: 6rem 0;
+    color: var(--color-alternative);
 }
 
 #top3 h2 {
@@ -150,6 +151,10 @@ h6 {
     transition: 250ms all ease-in-out;
 }
 
+#menu ul li a{
+    color: var(--color);
+}
+
 #menu ul li:hover a{
     color: #fff;
     text-shadow: 0 0 4px #664ac9 ;
@@ -157,14 +162,17 @@ h6 {
 }
 
 #menu h1 {
+    font-family: "Paytone One", sans-serif;
     font-size: 3.5rem;
 }
 
-#menu h1 a:hover {
+#menu h1 a {
+    color: var(--color);
     text-shadow: 0px 0px 10px #664ac9 ;
     color: #fff;
     letter-spacing: .1em;
 }
+
 
 .close-menu {
     display: none;
@@ -207,7 +215,9 @@ h6 {
 #contact h2 {
     font-size: 4.5rem;
     margin-top: 5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: .4rem;
+    font-family: "Kanit", sans-serif;
 }
 
 #box {
@@ -228,6 +238,9 @@ h6 {
     color: #654ac9d2;
 }
 
+#box label {
+    color: #0A1128;
+}
 
 fieldset {
     border: 0;
@@ -266,8 +279,6 @@ input:focus, textarea:focus {
     width: 40%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-self: center;
-    align-content: center;
 }
 
 .field-group .form-group label {
@@ -275,8 +286,13 @@ input:focus, textarea:focus {
 }
 
 fieldset.field-group .form-group {
+    align-items: center;
     float: left;
     margin-right: 1rem;
+}
+
+fieldset.field-group {
+    margin-left: 5%;
 }
 
 .form-group input[type="text"], .form-group input[type="email"], .form-group textarea {
@@ -300,7 +316,6 @@ fieldset.field-group .form-group {
     max-width: 30vw;
     width: 30vw;
     height: 15vh;
-
 }
 
 .button button{
@@ -312,7 +327,14 @@ fieldset.field-group .form-group {
     border: 0;    
     color: #999;
     border: 1px solid #664ac9;
+}
 
+.button button:hover, input:hover, textarea:hover{
+    box-shadow: 0 0 3px #0A1128;
+}
+
+textarea:focus, input:focus {
+    outline: 0;
 }
 
 /* RODAPÉ */
@@ -360,6 +382,7 @@ fieldset.field-group .form-group {
 }
 
 .back-to-top {
+    color: var(--color-alternative);
     position: fixed;
     bottom: 4rem;
     right: 4rem;
@@ -372,7 +395,7 @@ fieldset.field-group .form-group {
     border-radius: 50%;
     font-size: 4rem;
     rotate: -90deg;
-    border: 1px solid #6922ff;
+    border: 1px solid var(--color);
 }
 
 /* MEDIAS */
@@ -440,6 +463,10 @@ fieldset.field-group .form-group {
 
     .form-group input[type="text"] {
         width: 30vw;
+    }
+    
+    input {
+        text-align: center;
     }
 
     #contact #box .field-group{
@@ -567,6 +594,10 @@ fieldset.field-group .form-group {
     .form-group input[type="text"] {
         width: 30vw;
     }
+    
+    input {
+        text-align: center;
+    }
 
     #contact #box .field-group{
 
@@ -581,6 +612,7 @@ fieldset.field-group .form-group {
     #portfolio {
         grid-template-columns: 1fr;
         height: 180vh;
+        padding: 0;
     }
 
     #portfolio h2 {
@@ -588,7 +620,7 @@ fieldset.field-group .form-group {
     }
 
     #portfolio p {
-        font-size: 1.8rem;
+        font-size: 1.2rem;
     }
 
     .content-three {
@@ -597,27 +629,26 @@ fieldset.field-group .form-group {
     }
 
     #footer {
-        height: 80vh;
+        height: 100vh;
         grid-template-columns: 1fr;
     }
 
     #footer div {
-        margin: 5rem;
-    
+        margin: 2rem;
     }
 
     #footer h3 {
         color: #fff;
-        font-size: 3rem;
+        font-size: 2rem;
         margin-bottom: 2rem;
     }
 
     #footer li {
-        font-size: 2.5rem;
+        font-size: 1.2rem;
     }
 
     #footer p {
-        font-size: 2rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -698,11 +729,19 @@ fieldset.field-group .form-group {
     .form-group input[type="text"] {
         width: 30vw;
     }
+    
+    input {
+        text-align: center;
+    }
 
     #contact #box .field-group{
 
         margin-left: 1rem;
         grid-template-columns: 1fr;
+    }
+
+    #contact {
+        height: 130vh;
     }
 
     #contact label {
@@ -712,7 +751,8 @@ fieldset.field-group .form-group {
     #portfolio {
         grid-template-columns: 1fr;
         height: 200vh;
-        padding: 2rem 2rem;
+        padding: 0.5rem;
+        line-height: normal;
     }
 
     #portfolio h2 {
@@ -724,6 +764,7 @@ fieldset.field-group .form-group {
     }
 
     #portfolio div:hover p {
+        line-height: 1.7rem;
         padding: 0;
     }
 
@@ -733,7 +774,9 @@ fieldset.field-group .form-group {
     }
 
     #footer {
-        height: 80vh;
+
+        padding: 0;
+        height: 100vh;
         grid-template-columns: 1fr;
     }
 
@@ -832,6 +875,10 @@ fieldset.field-group .form-group {
     .form-group input[type="text"] {
         width: 30vw;
     }
+    
+    input {
+        text-align: center;
+    }
 
     #contact #box .field-group{
 
@@ -867,6 +914,8 @@ fieldset.field-group .form-group {
     }
 
     #footer {
+
+        padding: 0;
         height: 100vh;
         grid-template-columns: 1fr;
     }
@@ -878,12 +927,12 @@ fieldset.field-group .form-group {
 
     #footer h3 {
         color: #fff;
-        font-size: 3rem;
+        font-size: 2.5rem;
         margin-bottom: 2rem;
     }
 
     #footer li {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     #footer p {
@@ -948,11 +997,19 @@ fieldset.field-group .form-group {
     .form-group input[type="text"] {
         width: 30vw;
     }
+    
+    input {
+        text-align: center;
+    }
 
     #contact #box .field-group{
 
         margin-left: 1rem;
         grid-template-columns: 1fr;
+    }
+
+    #contact {
+        height: 130vh;
     }
 
     #contact label {
@@ -979,7 +1036,7 @@ fieldset.field-group .form-group {
     }
 
     #footer {
-        height: 80vh;
+        height: 100vh;
         grid-template-columns: 1fr;
     }
 
@@ -990,12 +1047,12 @@ fieldset.field-group .form-group {
 
     #footer h3 {
         color: #fff;
-        font-size: 3rem;
+        font-size: 2.5rem;
         margin-bottom: 2rem;
     }
 
     #footer li {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     #footer p {
@@ -1051,7 +1108,7 @@ fieldset.field-group .form-group {
     }
 
     #top3 {
-        height: 155vh;
+        height: 175vh;
     }
 
     #box {
@@ -1068,12 +1125,20 @@ fieldset.field-group .form-group {
         grid-template-columns: 1fr;
     }
 
+    #contact {
+        height: 130vh;
+    }
+
     #contact label {
         text-align: center;
     }
 
     .form-group input[type="text"] {
         width: 30vw;
+    }
+    
+    input {
+        text-align: center;
     }
     
     #portfolio {
@@ -1096,7 +1161,7 @@ fieldset.field-group .form-group {
     }
 
     #footer {
-        height: 80vh;
+        height: 100vh;
         grid-template-columns: 1fr;
     }
 
@@ -1155,7 +1220,7 @@ fieldset.field-group .form-group {
     }
 
     #top3 {
-        height: 140vh;
+        height: 155vh;
     }
 
     #contact {
@@ -1180,6 +1245,10 @@ fieldset.field-group .form-group {
         text-align: center;
     }
     
+    input {
+        text-align: center;
+    }
+    
     #portfolio {
         grid-template-columns: 1fr;
         height: 180vh;
@@ -1197,30 +1266,6 @@ fieldset.field-group .form-group {
     .content-three {
         margin-top: 0;
         grid-column: span 1;
-    }
-
-    #footer {
-        height: 80vh;
-        grid-template-columns: 1fr;
-    }
-
-    #footer div {
-        margin: 5rem;
-    
-    }
-
-    #footer h3 {
-        color: #fff;
-        font-size: 3rem;
-        margin-bottom: 2rem;
-    }
-
-    #footer li {
-        font-size: 2.5rem;
-    }
-
-    #footer p {
-        font-size: 2rem;
     }
 
 }
@@ -1256,7 +1301,7 @@ fieldset.field-group .form-group {
     }
 
     #top3 {
-        height: 120vh;
+        height: 145vh;
     }
     
     #portfolio {
@@ -1275,6 +1320,10 @@ fieldset.field-group .form-group {
     
     .form-group input[type="text"] {
         width: 30vw;
+    }
+    
+    input {
+        text-align: center;
     }
     
     #portfolio {
@@ -1317,7 +1366,7 @@ fieldset.field-group .form-group {
     }
 
     #top3 {
-        height: 110vh;
+        height: 125vh;
     }
   
     #contact #box .field-group{
@@ -1331,6 +1380,10 @@ fieldset.field-group .form-group {
     
     .form-group input[type="text"] {
         width: 30vw;
+    }
+    
+    input {
+        text-align: center;
     }
     
     #portfolio {
@@ -1390,15 +1443,27 @@ fieldset.field-group .form-group {
         grid-template-columns: 1fr;
     }
 
+    .form-group input[type="text"] {
+        width: 30vw;
+    }
+
+    input {
+        text-align: center;
+    }
+
     .content-three {
         margin-top: 0;
         grid-column: span 1;
+    }
+
+    #contact {
+        height: 130vh;
     }
 }
 
 @media (min-width: 804px) and (max-width: 919px) {
     .content {
-        height: 150vh;
+        height: 140vh;
     }
 
     #main-background {
@@ -1424,6 +1489,10 @@ fieldset.field-group .form-group {
         max-width: 25%;
     }
 
+    input {
+        text-align: center;
+    }
+
     #contact #box .field-group{
 
         grid-template-columns: 1fr;
@@ -1431,6 +1500,14 @@ fieldset.field-group .form-group {
 
     .field-group .form-group label{
         text-align: center;
+    }
+    
+    .form-group input[type="text"] {
+        width: 30vw;
+    }
+
+    fieldset.field-group {
+        margin-left: 1rem;
     }
     
     #portfolio {
@@ -1447,7 +1524,7 @@ fieldset.field-group .form-group {
 
 @media (min-width: 920px) and (max-width: 1103px) {
     .content {
-        height: 150vh;
+        height: 130vh;
     }
 
     #top3 p{
@@ -1480,9 +1557,109 @@ fieldset.field-group .form-group {
         grid-column: span 1;
     }
 
+    fieldset.field-group {
+        margin-left: 0;
+    }
+
 }
 
-@media (min-width: 1103px) and (max-width: 1999px) {
+@media (min-width: 1103px) and (max-width: 1600px) {
+    .content {
+        height: 100vh;
+    }
+
+    .intro-text h1 {
+        font-size: 7rem;
+    }
+
+    #home p, #portfolio p {
+        font-size: 2.2rem;
+    }
+
+    #top3 p{
+        font-size: 2.2rem;
+    }
+
+    .main-background p{
+        font-size: 2rem;
+    }
+
+    .main-background {
+        grid-template-columns: 1.2fr 1fr;
+        max-width: 100vw;
+        padding: 2rem 10rem 2rem 8rem;
+    }
+    
+    .secound-background {
+        max-width: 100vw;
+        padding: 2rem 10rem 2rem 8rem;
+    }
+
+    #portfolio h2{
+        font-size: 3rem;
+    }
+
+    #contact {
+        height: 120vh;
+    }
+
+    #contact #box{
+        height: 60vh;
+    }
+
+    #contact h2 {
+        font-size: 5rem;
+    }
+
+    #box #form fieldset.field-group {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #contact #box label{
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .form-group input[type="text"], .form-group input[type="email"]{
+        height: 2.5rem;
+        width: 10vw;
+        padding: 0 2rem;
+        font-size: 1.4rem;
+    }
+
+     .form-group input[type="email"]{
+        width: 18vw;
+     }
+
+     .form-group textarea {
+        width: 30vw;
+     }
+
+    .button button {
+        font-size: 1.5rem;
+        padding: 1.5rem;
+        border-radius: 20%;
+    }
+    
+    #footer p {
+        font-size: 2rem;
+    }
+
+    #footer h3{
+        font-size: 3rem;
+    }
+
+    #footer p:hover {
+        font-size: 2.5rem;
+    }
+
+    #footer ul li {
+        font-size: 2rem;
+    }
+
+}
+
+@media (min-width: 1600px) and (max-width: 1999px) {
     .content {
         height: 120vh;
     }
@@ -1491,8 +1668,12 @@ fieldset.field-group .form-group {
         font-size: 7rem;
     }
 
+    #home p, #top3.content p, #portfolio p {
+        font-size: 4rem;
+    }
+
     #top3 p{
-        font-size: 2.2rem;
+        font-size: 5rem;
     }
 
     .main-background p{
@@ -1510,9 +1691,60 @@ fieldset.field-group .form-group {
         padding: 2rem 10rem 2rem 8rem;
     }
 
+    #portfolio h2{
+        font-size: 10rem;
+    }
+
+    #contact #box{
+        height: 70vh;
+    }
+
+    #contact h2 {
+        font-size: 10rem;
+    }
+
+    #box #form fieldset.field-group {
+        grid-template-columns: 1fr;
+    }
+
+    #contact #box label{
+        text-align: center;
+        font-size: 6rem;
+    }
+
+    .form-group input[type="text"], .form-group input[type="email"], .form-group textarea {
+        height: 10rem;
+        width: 30vw;
+        padding: 0 3rem;
+        font-size: 4rem;
+    }
+
+    .button button {
+        font-size: 3rem;
+        padding: 3rem;
+        border-radius: 20%;
+    }
+    
+    #footer p {
+        font-size: 4rem;
+    }
+
+    #footer h3{
+        font-size: 6rem;
+    }
+
+    #footer p:hover {
+        font-size: 5rem;
+    }
+
+    #footer ul li {
+        font-size: 5rem;
+    }
+
 }
 
 @media (min-width: 2000px) {
+
     .intro-img {
         padding-left: 0;
     }
@@ -1543,6 +1775,58 @@ fieldset.field-group .form-group {
         max-width: 100vw;
         padding: 2rem 10rem 2rem 8rem;
     }
+
+    #portfolio h2{
+        font-size: 10rem;
+    }
+
+    #contact #box{
+        height: 70vh;
+    }
+
+    #contact h2 {
+        font-size: 10rem;
+    }
+
+    #box #form fieldset.field-group {
+        grid-template-columns: 1fr;
+    }
+
+    #contact #box label{
+        text-align: center;
+        font-size: 6rem;
+    }
+
+    .form-group input[type="text"], .form-group input[type="email"], .form-group textarea {
+        height: 10rem;
+        width: 30vw;
+        padding: 0 3rem;
+        font-size: 4rem;
+    }
+
+    .button button {
+        font-size: 3rem;
+        padding: 3rem;
+        border-radius: 20%;
+    }
+    
+    #footer p {
+        font-size: 4rem;
+    }
+
+    #footer h3{
+        font-size: 6rem;
+    }
+
+    #footer p:hover {
+        font-size: 5rem;
+    }
+
+    #footer ul li {
+        font-size: 5rem;
+    }
+
+
 }
 
 @media (max-width: 600px) {
@@ -1562,6 +1846,15 @@ fieldset.field-group .form-group {
 
     #menu ul {
         display: grid;
+    }
+
+    #menu ul li{
+        margin: 2rem;
+        font-size: 1.5rem;
+    }
+
+    #menu ul>li {
+        margin-top: 4rem;
     }
 
     .close-menu-label::after {
