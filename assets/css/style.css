@@ -156,10 +156,10 @@ h6 {
 }
 
 #menu ul li:hover a{
-    color: #fff;
-    text-shadow: 0 0 4px #664ac9 ;
-    letter-spacing: .1em;
+    border-bottom: 0.25rem solid rgba(220, 20, 60, .7);
+    transition: 0ms all;
 }
+
 
 #menu h1 {
     font-family: "Paytone One", sans-serif;
@@ -168,11 +168,7 @@ h6 {
 
 #menu h1 a {
     color: var(--color);
-    text-shadow: 0px 0px 10px #664ac9 ;
-    color: #fff;
-    letter-spacing: .1em;
 }
-
 
 .close-menu {
     display: none;
